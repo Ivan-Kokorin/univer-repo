@@ -585,10 +585,15 @@ template {
 }
 
 /*Стили для основого блока видео*/
-.content{
+.content{}
+/*Обёртка для всех блоков контента*/
+.blog-articles-wrap{
+>>>>>>> #fix: закончил верстать блок статей
     width: 820px;
     display: inline-block;
+    background-color: inherit;
 }
+/*Стили для основого блока видео*/
 .section-video-main{
     background-color: #ffffff;
     border: 1px solid #ededed;
@@ -1415,3 +1420,49 @@ template {
     height: 165px;
     overflow: hidden;
 }
+
+/*Стрелочка "more"*/
+.more-article__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 40px;
+    margit-bottom: 40px;
+    background-color: inherit;
+}
+.more-article{
+    width: 93px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.more-article:hover{
+    background-color: #e0e0e0;
+    border: 2px solid #bbbbbb;
+    border-radius: 5px;
+}
+
+.more-article__text{
+    color: #3f51b5;
+    margin-right: 8px;
+}
+.more-article__arrow-right{
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #dfdfdf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.more-article__arrow-right::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: url("../img/content/icon/right_arrow_more.svg"), center, no-repeat;
+    background-size: cover;
+}
+
