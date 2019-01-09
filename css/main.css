@@ -475,6 +475,20 @@ template {
 
 .header-top__account {
     display: flex;
+    flex-direction: row;
+}
+
+.more-article__text{
+    color: #3f51b5;
+    margin-right: 8px;
+}
+.more-article__arrow-right{
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #dfdfdf;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -588,7 +602,6 @@ template {
 .content{}
 /*Обёртка для всех блоков контента*/
 .blog-articles-wrap{
->>>>>>> #fix: закончил верстать блок статей
     width: 820px;
     display: inline-block;
     background-color: inherit;
