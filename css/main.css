@@ -600,11 +600,45 @@ template {
 
 /*Стили для основого блока видео*/
 .content{}
+/*Навигация по категориям блога*/
+.categories-blog-wrap{
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+}
+.categories-blog{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.871);
+    display: flex;
+    margin: 15px 0;
+    width: 800px;
+}
+.categories-blog__title{
+    font-weight: 700;
+    padding: 9px 0;
+}
+.categories_blog__element{
+    padding: 9px 22px;
+    margin-left: 15px;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.871);
+    background-color: #f5f5f5;
+    transition: 0.5s;
+}
+.categories_blog__element:hover{
+    border: 1px solid #3f51b5;
+    background-color: #ffffff;
+    color: #3f51b5;
+}
 /*Обёртка для всех блоков контента*/
 .blog-articles-wrap{
     width: 820px;
     display: inline-block;
     background-color: inherit;
+    margin-top: 30px;
 }
 /*Стили для основого блока видео*/
 .section-video-main{
@@ -623,6 +657,7 @@ template {
     box-sizing: border-box;
 }
 .section-video-main__content-name{
+    text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
     font-family: "Montserrat", Arial, sans-serif;
@@ -638,6 +673,8 @@ template {
 .section-video-main__comments{
     display: inline-block;
     margin-right: 15px;
+    text-decoration: none;
+    color: #ffffff;
 }
 .section-video-main__comments::before{
     content: "";
@@ -649,6 +686,8 @@ template {
 }
 .section-video-main__likes{
     display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
 }
 .section-video-main__likes::before{
     content: "";
@@ -694,7 +733,7 @@ template {
     margin-left: 20px;
     margin-right: 10px;
 }
-.section-video-main__name a{
+.section-video-main__name{
     text-decoration: none;
     font-size: 14px;
     font-family: "Montserrat", Arial, sans-serif;
@@ -781,6 +820,7 @@ template {
     margin-right: 10px;
 }
 .section-media-list__name{
+    text-decoration: none;
     font-size: 14px;
     font-family: "Montserrat", sans-serif;
     color: rgba(0, 0, 0, 0.871);
@@ -978,6 +1018,7 @@ template {
     box-sizing: border-box;
 }
 .section-media-cards__content-name{
+    text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
     font-family: "Montserrat", Arial sans-serif;
@@ -991,6 +1032,8 @@ template {
     float: right;
 }
 .section-media-cards__comments{
+    text-decoration: none;
+    color: #ffffff;
     display: inline-block;
     margin-right: 15px;
 }
@@ -1004,6 +1047,8 @@ template {
 }
 .section-media-cards__likes{
     display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
 }
 .section-media-cards__likes::before{
     content: "";
@@ -1055,6 +1100,7 @@ template {
     margin-right: 10px;
 }
 .section-media-cards__name{
+    text-decoration: none;
     font-size: 14px;
     font-family: "Montserrat", Arial, sans-serif;
     color: rgba(0, 0, 0, 0.871);
@@ -1326,6 +1372,7 @@ template {
     box-sizing: border-box;
 }
 .section-media-big-cards__content-name{
+    text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
     font-family: "Montserrat", Arial sans-serif;
@@ -1339,6 +1386,8 @@ template {
     float: right;
 }
 .section-media-big-cards__comments{
+    text-decoration: none;
+    color: #ffffff;
     display: inline-block;
     margin-right: 15px;
 }
@@ -1351,6 +1400,8 @@ template {
     background-size: cover;
 }
 .section-media-big-cards__likes{
+    text-decoration: none;
+    color: #ffffff;
     display: inline-block;
 }
 .section-media-big-cards__likes::before{
@@ -1403,6 +1454,7 @@ template {
     margin-right: 10px;
 }
 .section-media-big-cards__name{
+    text-decoration: none;
     font-size: 14px;
     font-family: "Montserrat", Arial, sans-serif;
     color: rgba(0, 0, 0, 0.871);
@@ -1440,7 +1492,7 @@ template {
     align-items: center;
     justify-content: flex-end;
     margin-top: 40px;
-    margit-bottom: 40px;
+    margin-bottom: 40px;
     background-color: inherit;
 }
 .more-article{
@@ -1448,12 +1500,12 @@ template {
     text-decoration: none;
     display: flex;
     align-items: center;
+    transition: 0.5s;
 }
 
 .more-article:hover{
     background-color: #e0e0e0;
-    border: 2px solid #bbbbbb;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .more-article__text{
