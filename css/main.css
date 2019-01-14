@@ -2298,3 +2298,6 @@ template {
     margin-right: 14px;
     opacity: 0.5;
 }
+.footer-bottom__link {
+    font-size: 12px;
+}
