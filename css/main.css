@@ -308,7 +308,26 @@ template {
 }
 
 
+/*Псевдораспорка для блоков с float*/
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/*Убираем текст placeholder при фокусе на input*/
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 
+/*hr*/
+hr{
+    border: none;
+    color: #e0e0e0;
+    background-color: #e0e0e0;
+    height: 1px;
+    margin: 0;
+}
 /* Сетка для контента */
 
 .grid {
@@ -473,6 +492,7 @@ template {
     margin-left: -8px;
 }
 
+
 .header-top__social-dribble::after {
     content: "";
     position: absolute;
@@ -485,6 +505,41 @@ template {
     margin-top: -8px;
     left: 50%;
     margin-left: -8px;
+        }
+.section-video-main__user-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.section-video-main__user-photo-wrap{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    float: left;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.section-video-main__name{
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.871);
+    line-height: 1.929;
+}
+.section-video-main__name:hover{
+    text-shadow: 0 0 1px;
+}
+.section-video-main__date{
+    font-size: 12px;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: rgba(33, 33, 33, 0.541);
+    line-height: 2.25;
+    letter-spacing: 1px;
+}
+.section-video-main__user{
+    width: 215px;
+>>>>>>> #fix: добавлен фоновый псевдоблок сайдбара, поправлены ховеры ссылок,добавлена кнопка поиска
 }
 .header-top__social-insta::after {
     content: "";
@@ -498,6 +553,9 @@ template {
     margin-top: -8px;
     left: 50%;
     margin-left: -8px;
+}
+.section-video-main__user-more:hover::after{
+    opacity: 0.5;
 }
 
 .header-top__social-fbook:hover,
@@ -654,9 +712,20 @@ template {
     margin: 15px 0;
     width: 800px;
 }
-.categories-blog__title{
+
+.categories-blog__title {
     font-weight: 700;
     padding: 9px 0;
+}
+.section-media-list__name:hover{
+    text-shadow: 0 0 1px;
+}
+.section-media-list__date{
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    color: rgba(33, 33, 33, 0.541);
+    line-height: 2.25;
+    letter-spacing: 1px;
 }
 .categories_blog__element{
     padding: 9px 22px;
@@ -681,7 +750,13 @@ template {
     margin-top: 30px;
 }
 /*Стили для основого блока видео*/
-.section-video-main{
+.section-video-main{}
+.section-media-list__user-more:hover::after{
+    opacity: 0.5;
+}
+/*карточки статей*/
+.section-media-cards{
+    width: 260px;
     background-color: #ffffff;
     border: 1px solid #ededed;
     border-radius: 5px;
@@ -707,7 +782,7 @@ template {
     float: left;
 }
 .section-video-main__content-name:hover{
-    text-shadow: 0px 0px 10px;
+    text-shadow: 0 0 10px;
 }
 .section-video-main__statistics{
     color: #ffffff;
@@ -755,7 +830,8 @@ template {
     background: url("../img/content/icon/like-hover.svg"), center, no-repeat;
     background-size: cover;
 }
-.section-video-main__title{
+
+.section-video-main__title {
     text-decoration: none;
     font-size: 18px;
     font-family: "Montserrat", Arial, sans-serif;
@@ -763,6 +839,21 @@ template {
     font-weight: bold;
     line-height: 1.611;
     padding-left: 15px;
+}
+.section-media-cards__text-wrap{
+    padding-top: 18px;
+    height: 175px;
+    overflow: hidden;
+}
+.section-media-cards__title{
+    font-size: 14px;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.871);
+    font-weight: bold;
+    line-height: 1.714;
+    padding-left: 20px;
+    text-decoration: none;
+    display: inline-block;
     transition: 0.3s;
 }
 .section-video-main__title:hover{
@@ -798,7 +889,12 @@ template {
     color: rgba(0, 0, 0, 0.871);
     line-height: 1.929;
 }
-.section-video-main__date{
+
+.section-video-main__date{}
+.section-media-cards__name:hover{
+    text-shadow: 0 0 1px;
+}
+.section-media-cards__date{
     font-size: 12px;
     font-family: "Montserrat", Arial, sans-serif;
     color: rgba(33, 33, 33, 0.541);
@@ -816,6 +912,40 @@ template {
     margin-top: 20px;
     margin-right: 15px;
     background: url("../img/content/icon/three_dot.svg"), center, no-repeat;
+    background-size: cover;
+}
+.section-media-cards__user-more:hover::after{
+    opacity: 0.5;
+}
+.section-media-cards__wrap-content-photo{
+    width: 260px;
+    height: 165px;
+    overflow: hidden;
+}
+/*стрелки для слайдера в карточках*/
+.section-media-cards__slider-arrow-wrap{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 59px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.section-media-cards__arrow-left{
+    width: 36px;
+    height: 36px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-media-cards__arrow-left::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: url("../img/content/icon/arrow-left.svg"), center, no-repeat;
     background-size: cover;
 }
 
@@ -838,6 +968,20 @@ template {
     width: 520px;
     display: inline-block;
     font-size: 16px;
+    background: url("../img/content/icon/like.svg"), center, no-repeat;
+    background-size: cover;
+}
+.section-media-big-cards__likes:hover::before{
+    background: url("../img/content/icon/like-hover.svg"), center, no-repeat;
+    background-size: cover;
+}
+.section-media-big-cards__text-wrap{
+    padding-top: 20px;
+    height: 160px;
+    overflow: hidden;
+}
+.section-media-big-cards__title{
+    font-size: 18px;
     font-family: "Montserrat", Arial, sans-serif;
     color: rgba(0, 0, 0, 0.871);
     font-weight: bold;
@@ -861,7 +1005,6 @@ template {
 .section-media-list__info-wrap{
     display: flex;
     flex-direction: column;
-
 }
 .section-media-list__user-wrap{
     display: flex;
@@ -884,7 +1027,12 @@ template {
     color: rgba(0, 0, 0, 0.871);
     line-height: 1.929;
 }
-.section-media-list__date{
+
+.section-media-list__date{}
+.section-media-big-cards__name:hover{
+    text-shadow: 0 0 1px;
+}
+.section-media-big-cards__date{
     font-size: 12px;
     font-family: "Montserrat", sans-serif;
     color: rgba(33, 33, 33, 0.541);
@@ -904,8 +1052,14 @@ template {
     background: url("../img/content/icon/three_dot.svg"), center, no-repeat;
     background-size: cover;
 }
-
-
+.section-media-big-cards__user-more:hover::after{
+    opacity: 0.5;
+}
+.section-media-big-cards__wrap-content-photo{
+    width: 260px;
+    height: 165px;
+    overflow: hidden;
+}
 .header-menu__link {
     display: flex;
     position: relative;
@@ -1086,7 +1240,7 @@ template {
     float: left;
 }
 .section-media-cards__content-name:hover{
-    text-shadow: 0px 0px 10px;
+    text-shadow: 0 0 10px;
 }
 .section-media-cards__statistics{
     color: #ffffff;
@@ -1461,7 +1615,7 @@ template {
     float: left;
 }
 .section-media-big-cards__content-name:hover{
-    text-shadow: 0px 0px 10px;
+    text-shadow: 0 0 10px;
 }
 .section-media-big-cards__statistics{
     color: #ffffff;
@@ -1617,7 +1771,7 @@ template {
 }
 .more-article__arrow-right:hover{
     box-shadow: 0 0 10px;
-    text-shadow: 0px 0px 2px;
+    text-shadow: 0 0 2px;
 }
 .more-article__arrow-right::before{
     position: absolute;
@@ -1892,7 +2046,6 @@ template {
 }
 .footer-widgets__social-dribble {
     padding: 18px;
-
     background: url("../img/footer/widgets/social/dribble-logo-button.svg") center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -1902,9 +2055,19 @@ template {
 .container--sidebar-wrap{
     background-color: #ffffff;
     margin-top: 30px;
+    position: relative;
 }
 .sidebar-wrap{
     width: 310px;
+    position: relative;
+}
+.container--sidebar-wrap::before{
+    content: "";
+    background-color: #ffffff;
+    position: absolute;
+    height: 100%;
+    display: block;
+    width: calc(50vw - 90%);
 }
 .sidebar{
     width: 270px;
@@ -1931,17 +2094,22 @@ template {
 .search-wrap{
     position: relative;
 }
-.search-wrap::after{
-    content: '';
+.sidebar__search-button{
     position: absolute;
     right: 5px;
     top: 29px;
     width: 35px;
     height: 35px;
+    border: none;
+    outline: none;
     background: url("../img/sidebar/search-icon.svg"), center, no-repeat;
     background-size: cover;
     cursor: pointer;
 }
+.sidebar__search-button:hover{
+    opacity: 0.8;
+}
+
 
 /*Стили категорий в сайдбаре*/
 .sidebar__categories{
@@ -1971,6 +2139,10 @@ template {
     color: rgba(0, 0, 0, 0.871);
     line-height: 2.857;
     border-bottom: 1px solid #ebeae9;
+    transition: 0.3s;
+}
+.sidebar__list-element:hover{
+    color: #3f51b5;
 }
 .last-child{
     border-bottom: none;
@@ -2003,7 +2175,9 @@ template {
 .sidebar__input-name:focus, .sidebar__input-email:focus{
     outline: none;
     border: 1px solid #afafaf;
+
 }
+
 .sidebar__submit-form{
     font-size: 18px;
     font-family: "Montserrat", Arial, sans-serif;
@@ -2020,7 +2194,7 @@ template {
     transition: 0.3s;
 }
 .sidebar__submit-form:hover{
-    background-color: #423fb5;
+    opacity: 0.9;
 }
 .sidebar__submit-form:focus{
     outline: none;
@@ -2230,6 +2404,9 @@ template {
 }
 
 /*карточки статей сайдбара*/
+.sidebar__tab-wrap:last-child{
+    border-bottom: none;
+}
 .sidebar__tab-wrap{
     display: flex;
     border-bottom: 1px solid #dee5e9;
@@ -2265,7 +2442,7 @@ template {
     background-size: cover;
 }
 .sidebar__comment-tab:hover{
-    text-shadow: 0px 0px 2px;
+    text-shadow: 0 0 2px;
 }
 .sidebar__comment-tab:hover::before{
     background: url("../img/sidebar/comment-icon-hover.svg"), center, no-repeat;
@@ -2303,6 +2480,7 @@ template {
 .sidebar__tags-item:hover {
     background-color: #cbc9c9;
 }
+
 .footer-bottom {
     margin-top: 77px;
     background-color: #303030;

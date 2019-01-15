@@ -23,7 +23,9 @@ function accordeonFooter () {
     });
 }
 
-function valid(form) { //валидация формы подписки
+
+
+function valid(form) { //валидация формы подписки в сайдбаре
             stat_name.innerHTML = "";
             stat_email.innerHTML = "";
 
@@ -47,4 +49,3 @@ function valid(form) { //валидация формы подписки
                 return true;
             }
         }
-
