@@ -316,13 +316,53 @@ template {
     margin: 0 auto;
 }
 
+
 /* Оформление хедер-топ */
 .header-top {
     background-color: #000000;
 }
+
+/*Навигация по категориям блога*/
+.categories-blog-wrap{
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+    padding: 15px 0;
+}
 .header-top .grid {
     display: flex;
     justify-content: space-between;
+    width: 800px;
+}
+.categories-blog__title{
+    font-weight: 700;
+    padding: 9px 0;
+}
+.categories_blog__element{
+    padding: 9px 22px;
+    margin-left: 15px;
+    border-radius: 25px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.871);
+    background-color: #f5f5f5;
+    transition: 0.5s;
+}
+.categories_blog__element:hover{
+    border: 1px solid #3f51b5;
+    background-color: #ffffff;
+    color: #3f51b5;
+}
+/*Обёртка для всех блоков контента*/
+.content-wrap{
+    background-color: #f5f5f5;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.blog-articles-wrap{
+    width: 820px;
+    margin-top: 30px;
 }
 
 /*Оформление хедер-топ. Оформление социального блока*/
@@ -797,7 +837,7 @@ template {
 .section-media-list__title{
     width: 520px;
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Montserrat", Arial, sans-serif;
     color: rgba(0, 0, 0, 0.871);
     font-weight: bold;
@@ -1859,12 +1899,15 @@ template {
 }
 
 /*Стили сайдбара*/
+.container--sidebar-wrap{
+    background-color: #ffffff;
+    margin-top: 30px;
+}
 .sidebar-wrap{
     width: 310px;
 }
 .sidebar{
     width: 270px;
-    display: inline-block;
     float: right;
 }
 /*Стили поиска в сайдбаре*/
