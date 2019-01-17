@@ -2296,7 +2296,6 @@ hr{
     padding: 10px 30px 10px 23px;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
->>>>>>> #fix: Внесены мелкие правки по оформлению, функциональности и БЭМу
 }
 .footer-widgets__twitter-time {
     position: relative;
@@ -2809,10 +2808,7 @@ hr{
 .sidebar__tags-item:hover {
     background-color: #cbc9c9;
 }
-.footer-bottom {
-    margin-top: 77px;
-    background-color: #303030;
-}
+
 .footer-bottom-wrapper {
     display: flex;
     justify-content: space-between;
@@ -2822,17 +2818,7 @@ hr{
 .footer-bottom__language select {
     background-color: transparent;
 }
-.footer-bottom__search {
-    width: 220px;
-    opacity: 0.5;
-    background-color: transparent;
-    border: 1px solid #ffffff;
-    border-radius: 25px;
-    color: #ffffff;
-    padding: 10px 30px 10px 23px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-}
+
 .footer-bottom__form {
     position: relative;
 }
